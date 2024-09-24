@@ -1,5 +1,4 @@
 package br.com.pratica.screenmatch.model;
-
 public class Title {
     private String name;
     private int releaseYear;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/java-screenmatch/java-screenmatch.iml" filepath="$PROJECT_DIR$/java-screenmatch/java-screenmatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-screenmatch-oo/java-screenmatch-oo.iml" filepath="$PROJECT_DIR$/java-screenmatch-oo/java-screenmatch-oo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pratica-screenmatch.iml" filepath="$PROJECT_DIR$/.idea/pratica-screenmatch.iml" />
+    </modules>
+  </component>
+</project>
