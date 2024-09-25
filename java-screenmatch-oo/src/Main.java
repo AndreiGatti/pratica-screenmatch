@@ -4,11 +4,13 @@ import br.com.pratica.screenmatch.model.Episode;
 import br.com.pratica.screenmatch.model.Movie;
 import br.com.pratica.screenmatch.model.Series;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setName("O poderoso chefão");
-        myMovie.setReleaseYear(1970);
+        Movie myMovie = new Movie("O poderoso chefão", 1970);
+        //myMovie.setName("O poderoso chefão");
+        //myMovie.setReleaseYear(1970);
         myMovie.setDurationInMinutes(180);
         System.out.println("Duração do filme: " + myMovie.getDurationInMinutes());
 
@@ -19,18 +21,18 @@ public class Main {
         System.out.println("Total de avaliações: " + myMovie.getTotalRatings());
         System.out.println(myMovie.getAverageRating());
 
-        Series lost = new Series();
-        lost.setName("Lost");
-        lost.setReleaseYear(2000);
+        Series lost = new Series("Lost", 2000);
+        //lost.setName("Lost");
+        //lost.setReleaseYear(2000);
         lost.displayTechnicalSheet();
         lost.setSeasons(10);
         lost.setEpisodesPerSeason(10);
         lost.setMinutesPerEpisode(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDurationInMinutes());
 
-        Movie anotherMovie = new Movie();
-        anotherMovie.setName("Avatar");
-        anotherMovie.setReleaseYear(2023);
+        Movie anotherMovie = new Movie("Avatar", 2023);
+        //anotherMovie.setName("Avatar");
+        //anotherMovie.setReleaseYear(2023);
         anotherMovie.setDurationInMinutes(200);
 
         TimeCalculator calculator = new TimeCalculator();
@@ -47,5 +49,21 @@ public class Main {
         episode.setSeries(lost);
         episode.setTotalViews(300);
         filter.filter(episode);
+
+        var andreiMovie = new Movie("Era do Gelo 3", 2009);
+        andreiMovie.setDurationInMinutes(200);
+        //andreiMovie.setName("Era do Gelo 3");
+        //andreiMovie.setReleaseYear(2009);
+        andreiMovie.rate(10);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(myMovie);
+        movieList.add(anotherMovie);
+        movieList.add(andreiMovie);
+        System.out.println("Tamanho da lista: " + movieList.size());
+        System.out.println("Primeiro Filme: " + movieList.get(0));
+        System.out.println(movieList);
+
+
     }
 }
