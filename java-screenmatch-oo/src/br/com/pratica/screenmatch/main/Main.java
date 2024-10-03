@@ -1,3 +1,5 @@
+package br.com.pratica.screenmatch.main;
+
 import br.com.pratica.screenmatch.calculation.TimeCalculator;
 import br.com.pratica.screenmatch.calculation.RecommendationFilter;
 import br.com.pratica.screenmatch.model.Episode;

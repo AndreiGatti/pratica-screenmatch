@@ -1,5 +1,5 @@
 package br.com.pratica.screenmatch.model;
-public class Title {
+public class Title implements Comparable<Title>{
     private String name;
     private int releaseYear;
     private boolean includedInPlan;
@@ -60,5 +60,10 @@ public class Title {
 
     public double getAverageRating() {
         return sumOfRatings / totalRatings;
+    }
+
+    @Override
+    public int compareTo(Title otherTitle) {
+        return this.getName().compareTo(otherTitle.getName());
     }
 }
